@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduGemini - AI Learning Assistant</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>🎓 EduGemini</h1>
+        <p>AI Powered Learning Assistant</p>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <h2>Welcome to EduGemini</h2>
+            <p>Ask your questions and get AI-powered explanations.</p>
+        </section>
+
+        <section class="chat-box">
+
+            <div id="chat-container">
+                <div class="bot-message">
+                    <b>EduGemini:</b>
+                    Hello! 👋 How can I help you with your studies?
+                </div>
+            </div>
+
+            <div class="input-area">
+                <input
+                    type="text"
+                    id="question"
+                    placeholder="Type your question here..."
+                    autocomplete="off"
+                >
+
+                <button onclick="askQuestion()">
+                    Ask Gemini
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 EduGemini | AI Learning Assistant</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+</html>

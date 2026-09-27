@@ -1,0 +1,493 @@
+:root {
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    color: #172033;
+
+    background: #f4f7fb;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #e8f0ff,
+            #f7f9fc 45%
+        );
+}
+
+
+button,
+select,
+textarea {
+    font: inherit;
+}
+
+
+.app-shell {
+    width: min(900px, 92%);
+
+    margin: 0 auto;
+
+    padding:
+        48px
+        0
+        80px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        flex-start;
+
+    gap: 24px;
+
+    margin-bottom: 28px;
+}
+
+
+.eyebrow {
+    display: inline-block;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+    color: #4967d8;
+}
+
+
+h1 {
+    margin:
+        8px
+        0;
+
+    font-size:
+        clamp(
+            38px,
+            7vw,
+            64px
+        );
+
+    line-height: 1;
+}
+
+
+.hero p {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: #657089;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+.status-dot {
+    background: #e7f8ed;
+
+    color: #187a42;
+
+    padding:
+        8px
+        12px;
+
+    border-radius:
+        999px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.94
+        );
+
+    border:
+        1px solid
+        #e1e7f0;
+
+    border-radius: 20px;
+
+    padding: 24px;
+
+    box-shadow:
+        0 14px 40px
+        rgba(
+            30,
+            55,
+            90,
+            0.08
+        );
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.field {
+    margin-bottom: 20px;
+}
+
+
+label {
+    display: block;
+
+    font-weight: 750;
+
+    margin-bottom: 8px;
+}
+
+
+select,
+textarea {
+    width: 100%;
+
+    border:
+        1px solid
+        #cfd7e5;
+
+    border-radius: 12px;
+
+    padding:
+        13px
+        14px;
+
+    background: #fff;
+
+    color: inherit;
+}
+
+
+textarea {
+    resize: vertical;
+
+    min-height: 160px;
+
+    line-height: 1.55;
+}
+
+
+select:focus,
+textarea:focus {
+    outline:
+        3px solid
+        rgba(
+            73,
+            103,
+            216,
+            0.14
+        );
+
+    border-color:
+        #4967d8;
+}
+
+
+.character-count {
+    margin-top: 6px;
+
+    text-align: right;
+
+    color: #7c879b;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    border: 0;
+
+    border-radius: 12px;
+
+    padding:
+        13px
+        18px;
+
+    font-weight: 750;
+
+    cursor: pointer;
+
+    background:
+        #4967d8;
+
+    color: white;
+
+    transition:
+        transform 0.15s ease,
+        opacity 0.15s ease;
+}
+
+
+button:hover {
+    transform:
+        translateY(-1px);
+}
+
+
+button:disabled {
+    opacity: 0.6;
+
+    cursor: wait;
+
+    transform: none;
+}
+
+
+.secondary {
+    background:
+        #eef2f8;
+
+    color:
+        #27324a;
+
+    padding:
+        9px
+        12px;
+}
+
+
+/* =========================
+   RESULTS
+========================= */
+
+.result-heading {
+    display: flex;
+
+    align-items: center;
+
+    justify-content:
+        space-between;
+
+    gap: 16px;
+}
+
+
+.result-heading h2 {
+    margin-top: 0;
+}
+
+
+#result {
+    white-space: pre-wrap;
+
+    line-height: 1.7;
+
+    color:
+        #303b52;
+}
+
+
+.quiz-question {
+    border-top:
+        1px solid
+        #e5eaf2;
+
+    padding:
+        18px
+        0;
+}
+
+
+.quiz-question:first-child {
+    border-top: 0;
+}
+
+
+.quiz-question h3 {
+    margin-top: 0;
+
+    line-height: 1.5;
+}
+
+
+.option {
+    display: block;
+
+    padding:
+        10px
+        12px;
+
+    background:
+        #f7f9fc;
+
+    border-radius: 10px;
+
+    margin:
+        8px
+        0;
+}
+
+
+.option.correct {
+    background:
+        #e8f7ed;
+
+    border:
+        1px solid
+        #b8e3c7;
+}
+
+
+.explanation {
+    color:
+        #59657d;
+
+    font-size: 14px;
+
+    margin-top: 10px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   ERRORS
+========================= */
+
+.error {
+    color:
+        #a52323;
+
+    background:
+        #fff0f0;
+
+    border:
+        1px solid
+        #ffd0d0;
+
+    padding:
+        12px;
+
+    border-radius:
+        10px;
+
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   UTILITY
+========================= */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    color:
+        #7b8598;
+
+    font-size:
+        13px;
+
+    padding:
+        20px;
+}
+
+
+footer a {
+    color:
+        #4967d8;
+
+    text-decoration:
+        none;
+
+    font-weight:
+        650;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (
+    max-width: 640px
+) {
+
+    .app-shell {
+        padding-top:
+            28px;
+    }
+
+
+    .hero {
+        flex-direction:
+            column;
+    }
+
+
+    .card {
+        padding:
+            18px;
+    }
+
+
+    h1 {
+        font-size:
+            48px;
+    }
+}
