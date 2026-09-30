@@ -1,10 +1,5 @@
 EduGenie – Google Gemini Powered Learning Assistant
 
-Presented by: Ranjini S and Team
-Department: 2 BCA – Shift 2
-Project Type: Academic Project
-
----
 
 📌 Abstract
 
